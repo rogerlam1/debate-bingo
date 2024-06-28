@@ -10,7 +10,7 @@ const debateWords = [
   "Socialism", "Capitalism", "Radical Left", "MAGA", "Antifa", "Black Lives Matter",
   "Law and Order", "Illegal Immigration", "Terrorism", "Veterans", "Foreign Policy",
   "Deficit", "National Debt", "Tariffs", "Paris Agreement", "Iran Deal", "North Korea",
-  "Space Force", "Opioid Crisis", "Cyber Security", "Big Tech"
+  "Space Force", "Opioid Crisis", "Cyber Security", "Big Tech", "Shark", "Jail", "Tremendous", "Criminal"
 ];
 
 const shuffleArray = (array) => {
