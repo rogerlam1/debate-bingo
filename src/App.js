@@ -22,13 +22,17 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
+
 const BingoCard = ({ word, isMarked, onClick }) => (
-  <div 
+  <button 
     className={`bingo-card ${isMarked ? 'marked' : ''}`} 
     onClick={onClick}
+    style={{
+      transition: 'background-color 0.3s, color 0.3s',
+    }}
   >
     {word}
-  </div>
+  </button>
 );
 
 const BingoBoard = () => {
