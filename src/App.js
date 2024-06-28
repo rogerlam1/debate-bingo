@@ -2,15 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const debateWords = [
-  "Economy", "Healthcare", "Climate", "Jobs", "Taxes", "Immigration", "Education",
-  "COVID-19", "China", "Russia", "NATO", "Trade", "Energy", "Infrastructure",
-  "Social Security", "Medicare", "Supreme Court", "Gun Control", "Race Relations",
+  "Economy", "Healthcare", "Climate Change", "Jobs", "Taxes", "Immigration", "Education",
+  "COVID-19", "China Relations", "Russia", "NATO", "Trade Deals", "Green Energy", "Infrastructure",
+  "Social Security", "Medicare", "Supreme Court", "Gun Laws", "Racial Equality",
   "Fake News", "Corruption", "Wall Street", "Middle Class", "Minimum Wage",
   "Green New Deal", "Affordable Care Act", "Second Amendment", "Electoral College",
-  "Socialism", "Capitalism", "Radical Left", "MAGA", "Antifa", "Black Lives Matter",
-  "Law and Order", "Illegal Immigration", "Terrorism", "Veterans", "Foreign Policy",
-  "Deficit", "National Debt", "Tariffs", "Paris Agreement", "Iran Deal", "North Korea",
-  "Space Force", "Opioid Crisis", "Cyber Security", "Big Tech", "Shark", "Jail", "Tremendous", "Criminal"
+  "Socialism", "Capitalism", "Progressive Policies", "MAGA", "Antifa", "Black Lives Matter",
+  "Law Enforcement", "Border Security", "Domestic Terrorism", "Veterans Affairs", "Foreign Policy",
+  "National Debt", "Tariffs", "Paris Agreement", "Iran Nuclear Deal", "North Korea",
+  "Space Force", "Opioid Crisis", "Cyber Security", "Big Tech Regulation", "Vaccine Distribution",
+  "Stimulus Checks", "Student Loan Debt", "Voting Rights", "Election Integrity", "Shark", "Abortion", "Jail"
 ];
 
 const shuffleArray = (array) => {
@@ -23,12 +24,12 @@ const shuffleArray = (array) => {
 };
 
 const BingoCard = ({ word, isMarked, onClick }) => (
-  <div 
+  <button 
     className={`bingo-card ${isMarked ? 'marked' : ''}`} 
     onClick={onClick}
   >
     {word}
-  </div>
+  </button>
 );
 
 const BingoBoard = () => {
@@ -36,9 +37,14 @@ const BingoBoard = () => {
   const [markedSquares, setMarkedSquares] = useState({});
 
   useEffect(() => {
+    newGame();
+  }, []);
+
+  const newGame = () => {
     const shuffledWords = shuffleArray(debateWords);
     setBoard(shuffledWords.slice(0, 49));
-  }, []);
+    setMarkedSquares({});
+  };
 
   const handleSquareClick = (index) => {
     setMarkedSquares(prev => ({
@@ -84,11 +90,7 @@ const BingoBoard = () => {
       )}
       <button 
         className="new-game-btn"
-        onClick={() => {
-          const shuffledWords = shuffleArray(debateWords);
-          setBoard(shuffledWords.slice(0, 49));
-          setMarkedSquares({});
-        }}
+        onClick={newGame}
       >
         New Game
       </button>

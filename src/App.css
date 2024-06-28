@@ -1,8 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .bingo-container {
-  max-width: 800px;
+  max-width: 90vw;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .bingo-board {
@@ -17,22 +40,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border: 2px solid #ddd;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  padding: 5px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.bingo-card:hover {
+  background-color: #e8e8e8;
 }
 
 .bingo-card.marked {
   background-color: #a0ffa0;
+  border-color: #50c878;
 }
 
 .bingo-win {
   font-size: 24px;
   font-weight: bold;
-  color: green;
+  color: #50c878;
   margin-bottom: 20px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .new-game-btn {
@@ -41,10 +80,44 @@
   background-color: #4CAF50;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .new-game-btn:hover {
   background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .bingo-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .bingo-board {
+    gap: 5px;
+  }
+
+  .bingo-card {
+    font-size: 10px;
+  }
+
+  .new-game-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .bingo-card {
+    font-size: 8px;
+  }
 }
