@@ -25,7 +25,7 @@ body {
 }
 
 h1 {
-  color: #333;
+  color: #5a65e3;
   margin-bottom: 20px;
 }
 
@@ -42,8 +42,8 @@ h1 {
   align-items: center;
   justify-content: center;
   background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   padding: 4px;
@@ -80,7 +80,7 @@ h1 {
 .new-game-btn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: navy;
+  background-color: rgb(35, 35, 226);
   color: white;
   border: none;
   border-radius: 5px;
@@ -89,7 +89,7 @@ h1 {
 }
 
 .new-game-btn:hover {
-  background-color: #000080;
+  background-color: #485799;
 }
 
 @media (max-width: 900px) {
