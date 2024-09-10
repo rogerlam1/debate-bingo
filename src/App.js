@@ -9,8 +9,9 @@ const debateWords = [
   "Green New Deal", "Affordable Care Act", "Second Amendment", "Electoral College",
   "Socialism", "Capitalism", "Radical Left", "MAGA", "Antifa", "Black Lives Matter",
   "Law and Order", "Illegal Immigration", "Terrorism", "Veterans", "Foreign Policy",
-  "Deficit", "National Debt", "Tariffs", "Paris Agreement", "Iran Deal", "North Korea",
-  "Space Force", "Opioid Crisis", "Cyber Security", "Big Tech", "Shark", "Jail", "Tremendous", "Criminal"
+  "Deficit", "National Debt", "Comrade", "Inflation", "Couch", "Unfair", "Electric Cars",
+  "Boat", "Windmills", "Child Care", "Drill Baby Drill", "Tariffs", "Elon", "Nasty",
+  "Weird", "Felon"
 ];
 
 const shuffleArray = (array) => {
@@ -21,7 +22,6 @@ const shuffleArray = (array) => {
   }
   return shuffled;
 };
-
 
 const BingoCard = ({ word, isMarked, onClick }) => (
   <button 
@@ -72,7 +72,7 @@ const BingoBoard = () => {
 
   return (
     <div className="bingo-container">
-      <h1>Trump-Biden Debate Bingo</h1>
+      <h1>Harris - Trump Debate Bingo</h1>
       <div className="bingo-board">
         {board.map((word, index) => (
           <BingoCard
