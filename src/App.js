@@ -5,7 +5,7 @@ const debateWords = [
   "Economy", "Healthcare", "Climate", "Jobs", "Taxes", "Immigration", "Education",
   "COVID-19", "China", "Russia", "NATO", "Trade", "Energy", "Infrastructure",
   "Social Security", "Medicare", "Supreme Court", "Gun Control", "Race Relations",
-  "Fake News", "Corruption", "Wall Street", "Middle Class", "Minimum Wage",
+  "Fake News", "Corruption", "Illegals", "Border", "Wall Street", "Middle Class", "Minimum Wage",
   "Green New Deal", "Affordable Care Act", "Second Amendment", "Electoral College",
   "Socialism", "Capitalism", "Radical Left", "MAGA", "Antifa", "Black Lives Matter",
   "Law and Order", "Illegal Immigration", "Terrorism", "Veterans", "Foreign Policy",
