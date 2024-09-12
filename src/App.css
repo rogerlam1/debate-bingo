@@ -2,36 +2,38 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 10vh;
+  min-height: 100vh;
   padding: 20px;
 }
 
 .bingo-container {
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  background-color: white;
+  background-color: #1e1e1e;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
 
 h1 {
-  color: #5a65e3;
+  color: #bb86fc;
   margin-bottom: 20px;
 }
 
 .bingo-board {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 8px;
   margin-bottom: 20px;
 }
@@ -41,25 +43,26 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f8f8f8;
-  border: 2px solid #ddd;
+  background-color: #2e2e2e;
+  border: 2px solid #3e3e3e;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  padding: 4px;
+  padding: 8px;
   word-wrap: break-word;
   text-align: center;
   transition: all 0.3s ease;
+  color: #e0e0e0;
 }
 
 .bingo-card:hover {
-  background-color: #e8e8e8;
+  background-color: #3e3e3e;
 }
 
 .bingo-card.marked {
-  background-color: navy;
-  border-color: #000080;
-  color: white;
+  background-color: #bb86fc;
+  border-color: #9966cc;
+  color: #121212;
   animation: pulse 0.3s ease-in-out;
 }
 
@@ -72,7 +75,7 @@ h1 {
 .bingo-win {
   font-size: 24px;
   font-weight: bold;
-  color: navy;
+  color: #bb86fc;
   margin-bottom: 20px;
   animation: pulse 1s infinite;
 }
@@ -80,8 +83,8 @@ h1 {
 .new-game-btn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: rgb(35, 35, 226);
-  color: white;
+  background-color: #bb86fc;
+  color: #121212;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -89,21 +92,7 @@ h1 {
 }
 
 .new-game-btn:hover {
-  background-color: #485799;
-}
-
-@media (max-width: 900px) {
-  .bingo-container {
-    padding: 15px;
-  }
-
-  .bingo-board {
-    gap: 6px;
-  }
-
-  .bingo-card {
-    font-size: 10px;
-  }
+  background-color: #9966cc;
 }
 
 @media (max-width: 600px) {
@@ -120,11 +109,11 @@ h1 {
   }
 
   .bingo-board {
-    gap: 4px;
+    gap: 6px;
   }
 
   .bingo-card {
-    font-size: 8px;
+    font-size: 12px;
     padding: 2px;
   }
 
@@ -148,7 +137,7 @@ h1 {
   }
 
   .bingo-card {
-    font-size: 6px;
+    font-size: 10px;
   }
 
   .new-game-btn {

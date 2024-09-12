@@ -41,7 +41,7 @@ const BingoBoard = () => {
 
   useEffect(() => {
     const shuffledWords = shuffleArray(debateWords);
-    setBoard(shuffledWords.slice(0, 49));
+    setBoard(shuffledWords.slice(0, 25));
   }, []);
 
   const handleSquareClick = (index) => {
@@ -52,21 +52,24 @@ const BingoBoard = () => {
   };
 
   const checkBingo = () => {
-    // Check rows, columns, and diagonals
-    for (let i = 0; i < 7; i++) {
+    // Check rows and columns
+    for (let i = 0; i < 5; i++) {
       if (
-        (markedSquares[i*7] && markedSquares[i*7+1] && markedSquares[i*7+2] && markedSquares[i*7+3] && markedSquares[i*7+4] && markedSquares[i*7+5] && markedSquares[i*7+6]) ||
-        (markedSquares[i] && markedSquares[i+7] && markedSquares[i+14] && markedSquares[i+21] && markedSquares[i+28] && markedSquares[i+35] && markedSquares[i+42])
+        (markedSquares[i*5] && markedSquares[i*5+1] && markedSquares[i*5+2] && markedSquares[i*5+3] && markedSquares[i*5+4]) ||
+        (markedSquares[i] && markedSquares[i+5] && markedSquares[i+10] && markedSquares[i+15] && markedSquares[i+20])
       ) {
         return true;
       }
     }
+    
+    // Check diagonals
     if (
-      (markedSquares[0] && markedSquares[8] && markedSquares[16] && markedSquares[24] && markedSquares[32] && markedSquares[40] && markedSquares[48]) ||
-      (markedSquares[6] && markedSquares[12] && markedSquares[18] && markedSquares[24] && markedSquares[30] && markedSquares[36] && markedSquares[42])
+      (markedSquares[0] && markedSquares[6] && markedSquares[12] && markedSquares[18] && markedSquares[24]) ||
+      (markedSquares[4] && markedSquares[8] && markedSquares[12] && markedSquares[16] && markedSquares[20])
     ) {
       return true;
     }
+    
     return false;
   };
 
@@ -90,7 +93,7 @@ const BingoBoard = () => {
         className="new-game-btn"
         onClick={() => {
           const shuffledWords = shuffleArray(debateWords);
-          setBoard(shuffledWords.slice(0, 49));
+          setBoard(shuffledWords.slice(0, 25));
           setMarkedSquares({});
         }}
       >
