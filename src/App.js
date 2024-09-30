@@ -7,7 +7,7 @@ const debateWords = [
   "Justice", "Equality", "Freedom", "Leadership", "Unity",
   "Reform", "Innovation", "Growth", "Policy", "Democracy",
   "Values", "Coach", "Stolen Valor", "Mainstream Media", "Abortion Access", "Migrants", "FEMA", "NOAA",
-  "Corporate Accountability", "Military Service", "Family Values", "Racism", "Project 2025"
+  "Corporate Accountability", "Military Service", "Family Values", "Racism", "Project 2025", "Hiatiaaaa", "Bite"
 ];
 
 const shuffleArray = (array) => {
@@ -23,9 +23,6 @@ const BingoCard = ({ word, isMarked, onClick }) => (
   <button 
     className={`bingo-card ${isMarked ? 'marked' : ''}`} 
     onClick={onClick}
-    style={{
-      transition: 'background-color 0.3s, color 0.3s',
-    }}
   >
     {word}
   </button>
@@ -34,10 +31,15 @@ const BingoCard = ({ word, isMarked, onClick }) => (
 const BingoBoard = () => {
   const [board, setBoard] = useState([]);
   const [markedSquares, setMarkedSquares] = useState({});
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const shuffledWords = shuffleArray(debateWords);
     setBoard(shuffledWords.slice(0, 25));
+
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleSquareClick = (index) => {
@@ -69,10 +71,17 @@ const BingoBoard = () => {
     return false;
   };
 
+  const getFontSize = () => {
+    if (windowWidth <= 320) return '10px';
+    if (windowWidth <= 375) return '12px';
+    if (windowWidth <= 425) return '14px';
+    return '16px';
+  };
+
   return (
     <div className="bingo-container">
-      <h1>Walz - Vance Debate Bingo</h1>
-      <div className="bingo-board">
+      <h1 className="bingo-title">Walz - Vance Debate Bingo</h1>
+      <div className="bingo-board" style={{ fontSize: getFontSize() }}>
         {board.map((word, index) => (
           <BingoCard
             key={index}
