@@ -6,7 +6,7 @@ const debateWords = [
   "Jobs", "Education", "Taxes", "Infrastructure", "Security",
   "Justice", "Equality", "Freedom", "Leadership", "Unity",
   "Reform", "Innovation", "Growth", "Policy", "Democracy",
-  "Values", "Coach", "Stolen Valor", "Mainstream Media", "Abortion Access",
+  "Values", "Coach", "Stolen Valor", "Mainstream Media", "Abortion Access", "Migrants", "FEMA", "NOAA",
   "Corporate Accountability", "Military Service", "Family Values", "Racism", "Project 2025"
 ];
 
