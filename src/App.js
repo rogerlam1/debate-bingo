@@ -7,7 +7,7 @@ const debateWords = [
   "Justice", "Equality", "Freedom", "Leadership", "Unity",
   "Reform", "Innovation", "Growth", "Policy", "Democracy",
   "Values", "Coach", "Stolen Valor", "Mainstream Media", "Abortion Access",
-  "Corporate Accountability", "Military Service", "Family Values"
+  "Corporate Accountability", "Military Service", "Family Values", "Racism", "Project 2025"
 ];
 
 const shuffleArray = (array) => {
@@ -71,7 +71,7 @@ const BingoBoard = () => {
 
   return (
     <div className="bingo-container">
-      <h1>Harris - Trump Debate Bingo</h1>
+      <h1>Walz - Vance Debate Bingo</h1>
       <div className="bingo-board">
         {board.map((word, index) => (
           <BingoCard
