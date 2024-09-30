@@ -11,36 +11,32 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 10px;
 }
 
 .bingo-container {
-  max-width: 600px;
   width: 100%;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background-color: #1e1e1e;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
 
-h1 {
+.bingo-title {
   color: #bb86fc;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 24px;
 }
 
 .bingo-board {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 5px;
+  margin-bottom: 15px;
   aspect-ratio: 1;
-  width: 100%;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .bingo-card {
@@ -49,17 +45,24 @@ h1 {
   align-items: center;
   justify-content: center;
   background-color: #2e2e2e;
-  border: 2px solid #3e3e3e;
+  border: 1px solid #3e3e3e;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  padding: 4px;
-  word-wrap: break-word;
-  text-align: center;
+  padding: 2px;
   transition: all 0.3s ease;
   color: #e0e0e0;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
+}
+
+.bingo-card-text {
+  font-size: 14px;
+  line-height: 1.2;
+  word-wrap: break-word;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .bingo-card:hover {
@@ -70,21 +73,13 @@ h1 {
   background-color: #bb86fc;
   border-color: #9966cc;
   color: #121212;
-  animation: pulse 0.3s ease-in-out;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
 }
 
 .bingo-win {
   font-size: 24px;
   font-weight: bold;
   color: #bb86fc;
-  margin-bottom: 20px;
-  animation: pulse 1s infinite;
+  margin-bottom: 15px;
 }
 
 .new-game-btn {
@@ -102,26 +97,13 @@ h1 {
   background-color: #9966cc;
 }
 
-@media (max-width: 600px) {
-  .App {
-    padding: 10px;
+@media (max-width: 480px) {
+  .bingo-title {
+    font-size: 20px;
   }
 
-  .bingo-container {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  .bingo-board {
-    gap: 4px;
-  }
-
-  .bingo-card {
+  .bingo-card-text {
     font-size: 12px;
-    padding: 2px;
   }
 
   .new-game-btn {
@@ -130,22 +112,13 @@ h1 {
   }
 }
 
-@media (max-width: 400px) {
-  .App {
-    padding: 5px;
+@media (max-width: 320px) {
+  .bingo-title {
+    font-size: 18px;
   }
 
-  .bingo-container {
-    padding: 5px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  .bingo-card {
+  .bingo-card-text {
     font-size: 10px;
-    padding: 1px;
   }
 
   .new-game-btn {

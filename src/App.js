@@ -7,7 +7,7 @@ const debateWords = [
   "Justice", "Equality", "Freedom", "Leadership", "Unity",
   "Reform", "Innovation", "Growth", "Policy", "Democracy",
   "Values", "Coach", "Stolen Valor", "Mainstream Media", "Abortion Access", "Migrants", "FEMA", "NOAA",
-  "Corporate Accountability", "Military Service", "Family Values", "Racism", "Project 2025", "Hiatiaaaa", "Bite"
+  "Corporate Accountability", "Military Service", "Family Values", "Racism", "Project 2025", "Mentally Challenged","Hiatiaaaa", "Bite"
 ];
 
 const shuffleArray = (array) => {
@@ -24,7 +24,7 @@ const BingoCard = ({ word, isMarked, onClick }) => (
     className={`bingo-card ${isMarked ? 'marked' : ''}`} 
     onClick={onClick}
   >
-    {word}
+    <span className="bingo-card-text">{word}</span>
   </button>
 );
 
