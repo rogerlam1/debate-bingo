@@ -2,16 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const debateWords = [
-  "Economy", "Healthcare", "Climate", "Jobs", "Taxes", "Immigration", "Education",
-  "COVID-19", "China", "Russia", "NATO", "Trade", "Energy", "Infrastructure",
-  "Social Security", "Medicare", "Supreme Court", "Gun Control", "Race Relations",
-  "Fake News", "Corruption", "Wall Street", "Middle Class", "Minimum Wage",
-  "Green New Deal", "Affordable Care Act", "Second Amendment", "Electoral College",
-  "Socialism", "Capitalism", "Radical Left", "MAGA", "Antifa", "Black Lives Matter",
-  "Law and Order", "Illegal Immigration", "Terrorism", "Veterans", "Foreign Policy",
-  "Deficit", "National Debt", "Comrade", "Inflation", "Couch", "Unfair", "Electric Cars",
-  "Boat", "Windmills", "Child Care", "Drill Baby Drill", "Tariffs", "Elon", "Nasty",
-  "Weird", "Felon"
+  "Inflation", "Immigration", "Climate", "Bipartisanship", "Healthcare",
+  "Jobs", "Education", "Taxes", "Infrastructure", "Security",
+  "Justice", "Equality", "Freedom", "Leadership", "Unity",
+  "Reform", "Innovation", "Growth", "Policy", "Democracy",
+  "Values", "Coach", "Stolen Valor", "Mainstream Media", "Abortion Access",
+  "Corporate Accountability", "Military Service", "Family Values"
 ];
 
 const shuffleArray = (array) => {
