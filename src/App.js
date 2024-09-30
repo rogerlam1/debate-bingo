@@ -72,9 +72,10 @@ const BingoBoard = () => {
   };
 
   const getFontSize = () => {
-    if (windowWidth <= 320) return '10px';
-    if (windowWidth <= 375) return '12px';
-    if (windowWidth <= 425) return '14px';
+    if (windowWidth <= 320) return '8px';
+    if (windowWidth <= 375) return '10px';
+    if (windowWidth <= 425) return '12px';
+    if (windowWidth <= 768) return '14px';
     return '16px';
   };
 
